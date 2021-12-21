@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-5">
+                <h1 class="mb-5">TacocaT - A coding challenge</h1>
+                <h5>TacocaT is a palindrome. A palindrome is a word, phrase or sequence that reads the same backward as forward. <i>e.g. tacocat</i></h5>
+                <h5>This program can check if what you type is a palindrome.</h5>
+            </div>
+            <ul class="mb-3 fa-ul checklist">
+                <li><i class="fas fa-check-square"></i> C# & OOP</li>
+                <li><i class="fas fa-check-square"></i> .NET Core MVC</li>
+                <li><i class="fas fa-check-square"></i> JavaScript</li>
+                <li><i class="fas fa-check-square"></i> Bootstrap</li>
+                <li><i class="fas fa-check-square"></i> HTML & CSS</li>
+            </ul>
+            <div class="mx-4 mb-5">
+                <a class="btn btn-outline-secondary" asp-area="" asp-controller="Home" asp-action="Reverse">Try it out</a>
+            </div>
+            <div>
+                <h5 class="mb-3">Technologies used</h5>
+                <i class="fab fa-microsoft fa-5x me-2" id="msicon"></i>
+                <i class="fab fa-js-square fa-5x mx-2" id="jsicon"></i>
+                <i class="fab fa-bootstrap fa-5x mx-2" id="bsicon"></i>
+                <i class="fab fa-html5 fa-5x mx-2" id="html5icon"></i>
+                <i class="fab fa-css3-alt fa-5x mx-2" id="css3icon"></i>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="~/img/tacocat-logo.png" alt="Taco Cat logo" />
+        </div>
+    </div>
+</div>

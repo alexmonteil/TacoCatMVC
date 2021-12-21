@@ -1,0 +1,63 @@
+﻿
+<div class="container">
+    <!-- First row -->
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <!-- Try a card -->
+            <div class="card mt-5 shadow">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body">
+                    <h4 class="card-title border-bottom p-1"><i class="fas fa-bolt"></i> Code Review</h4>
+                    <p class="card-text">Cleaning the String: Using regex and the replace function, non-characters are stripped for comparison</p>
+                    <p class="card-text">Loop: Using a for loop, the original string is looped over and each character is concatenated to and empty string to create the reversed string</p>
+                    <p class="card-text">Comparison: Comparing the cleaned version to the reversed string determines if the string provided is a palindrome</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second row -->
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <!-- FizzBuzz -->
+            <pre class="line-numbers p-0" tabindex="0">
+            <code class="language-csharp">
+            public class Palindrome
+            {
+                public string InputWord { get; set; }
+                public string RevWord { get; set; }
+                public bool IsPalindrome { get; set; }
+                public string Message { get; set; }
+            }
+
+            public IActionResult Reverse(Palindrome palindrome)
+            {
+                string inputWord = palindrome.InputWord;
+                string revWord = "";
+
+                for (int i = inputWord.Length - 1; i >= 0; i--)
+                {
+                    revWord += inputWord[i];
+                }
+
+                palindrome.RevWord = revWord;
+                revWord = Regex.Replace(revWord.ToLower(), "[^a-zA-Z0-9]+", "");
+                inputWord = Regex.Replace(inputWord.ToLower(), "[^a-zA-Z0-9]+", "");
+
+                if (revWord.Equals(inputWord))
+                {
+                    palindrome.IsPalindrome = true;
+                    palindrome.Message = $"Success {palindrome.InputWord} is a Palindrome!";
+                }
+                else
+                {
+                    palindrome.IsPalindrome = false;
+                    palindrome.Message = $"Sorry {palindrome.InputWord} is not a Palindrome.";
+                }
+
+                return View(palindrome);
+            }
+            </code>
+            </pre>
+        </div>
+    </div>
+</div>
