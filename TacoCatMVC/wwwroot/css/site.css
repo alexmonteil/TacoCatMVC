@@ -59,11 +59,6 @@ footer {
 }
 
 
-.checklist >li i {
-    color: var(--secondary-color);
-}
-
-
 code[class*="language-"],
 pre[class*="language-"] {
     white-space: pre-wrap;
